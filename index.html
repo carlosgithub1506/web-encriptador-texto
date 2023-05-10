@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Corinthia&family=Inter:wght@500&family=Montserrat:wght@300&family=Permanent+Marker&family=Redacted+Script:wght@300&display=swap"
+			rel="stylesheet"
+		/>
+
+		<title>Encriptador</title>
+	</head>
+
+	<body>
+		<header class="logo">
+			<img src="./img/Logo.png" alt="" />
+		</header>
+		<main>
+			<section class="section-one">
+				<textarea
+					class="text-intro"
+					cols="10"
+					rows="2"
+					placeholder="Ingrese el texto aqui"
+				></textarea>
+				<div class="box-info">
+					<img src="./img/Vector.png" alt="" />
+					<h6 class="informacion">
+						Solo letras minusculas y sin acentos
+					</h6>
+				</div>
+				<div class="botton-twins">
+					<button class="encriptar" onclick="botonEncriptar()">
+						Encriptar
+					</button>
+					<button class="desencriptar" onclick="botonDesencriptar()">
+						Desencriptar
+					</button>
+				</div>
+			</section>
+
+			<section class="section-two">
+				<textarea class="text-out" cols="20" rows="10"></textarea>
+				<div class="boxCopy">
+					<button
+						class="button-copy"
+						id="botonCopiar"
+						onclick="copiarTexto()"
+					>
+						Copiar
+					</button>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<h6>Realizado por Carlos Lopez</h6>
+			<h6>carlospez.28@gmail.com</h6>
+		</footer>
+		<script src="./app.js"></script>
+	</body>
+</html>
