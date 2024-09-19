@@ -31,7 +31,7 @@ Resultado:
 
 - Se devuelve el texto encriptado.
 
-Ejemplo
+Ejemplo:
 
 - Texto original: "hola mundo"
 
