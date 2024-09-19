@@ -5,13 +5,13 @@ const textoOut = document.querySelector(".text-out");
 
 function botonEncriptar()
 {
-    const textoEncriptado=encriptar(textoIntro.value);
-    textoOut.value=textoEncriptado;
+    const textoEncriptado = encriptar(textoIntro.value);
+    textoOut.value = textoEncriptado;
    if (textoEncriptado.length>0)
     {
-        textoIntro.value="";
-        textoOut.style.backgroundImage="none";
-        document.querySelector(".boxCopy").style.display= "flex";
+        textoIntro.value = "";
+        textoOut.style.backgroundImage = "none";
+        document.querySelector(".boxCopy").style.display = "flex";
     }    
 }
 
@@ -19,12 +19,12 @@ function botonEncriptar()
 function encriptar(stringEncriptar)
 {
     let letras=[["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]];
-    stringEncriptar=stringEncriptar.toLowerCase();
-    for (let i =0; i<letras.length; i++)
+    stringEncriptar = stringEncriptar.toLowerCase();
+    for (let i = 0; i < letras.length; i++)
     {
         if (stringEncriptar.includes(letras[i][0]))
         {
-            stringEncriptar=stringEncriptar.replaceAll(letras[i][0],letras[i][1]);
+            stringEncriptar=stringEncriptar.replaceAll(letras[i][0], letras[i][1]);
 
         }
     }
@@ -35,13 +35,13 @@ function encriptar(stringEncriptar)
 
 function botonDesencriptar()
 {
-    const textoEncriptado=desencriptar(textoIntro.value);
-    textoOut.value=textoEncriptado;
-   if (textoEncriptado.length>0)
+    const textoEncriptado = desencriptar(textoIntro.value);
+    textoOut.value = textoEncriptado;
+    if (textoEncriptado.length>0)
     {
-        textoIntro.value="";
-        textoOut.style.backgroundImage="none";
-        document.querySelector(".boxCopy").style.display= "flex";
+        textoIntro.value = "";
+        textoOut.style.backgroundImage = "none";
+        document.querySelector(".boxCopy").style.display = "flex";
     }    
 }
 
@@ -49,12 +49,12 @@ function botonDesencriptar()
 function desencriptar(stringDesencriptar)
 {
     let letras=[["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]];
-    stringDesencriptar=stringDesencriptar.toLowerCase();
-    for (let i =0; i<letras.length; i++)
+    stringDesencriptar = stringDesencriptar.toLowerCase();
+    for (let i = 0; i<letras.length; i++)
     {
         if (stringDesencriptar.includes(letras[i][1]))
         {
-            stringDesencriptar=stringDesencriptar.replaceAll(letras[i][1],letras[i][0]);
+            stringDesencriptar = stringDesencriptar.replaceAll(letras[i][1], letras[i][0]);
 
         }
     }
@@ -65,10 +65,10 @@ function desencriptar(stringDesencriptar)
 
 function copiarTexto(){
  
-   const copiar=document.querySelector(".text-out");
+   const copiar = document.querySelector(".text-out");
    copiar.select();
    document.execCommand("copy");
-   botonCopiar.textContent="copiado";
+   botonCopiar.textContent = "copiado";
 
 
 }
